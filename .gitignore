@@ -11,3 +11,5 @@ buildNumber.properties
 .project
 .DS_Store
 .classpath
+.metadata
+.vertex

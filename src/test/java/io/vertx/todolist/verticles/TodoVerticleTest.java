@@ -30,7 +30,7 @@ public class TodoVerticleTest {
   @Test
   public void testThatTheServerIsStarted(TestContext tc) {
     Async async = tc.async();
-    vertx.createHttpClient().getNow(8080, "localhost", "/", response -> {
+    vertx.createHttpClient().getNow(8082, "localhost", "/todos", response -> {
       tc.assertEquals(response.statusCode(), 200);
       response.bodyHandler(body -> {
         tc.assertTrue(body.length() > 0);
